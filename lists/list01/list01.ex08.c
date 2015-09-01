@@ -1,3 +1,4 @@
+// Paulo Henrique Tada - 11/0135431
 #include <stdio.h>
 #include <math.h>
 
