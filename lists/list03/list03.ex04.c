@@ -1,3 +1,10 @@
+/*
+Universidade de Brasília
+Nome: Paulo Henrique Tada Ferreira Santos
+Mat: 11-0135431
+Prof.: Luiz Laranjeira
+*/
+
 #include <stdio.h>
 
 int main(){
