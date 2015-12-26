@@ -1,0 +1,56 @@
+/* fscanf example */
+#include <stdio.h>
+
+int main ()
+{
+  char str [80];
+  float f;
+  FILE * pFile;
+
+  pFile = fopen ("myfile.txt","w+");
+  fprintf (pFile, "%f %s", 3.1416, "PI");
+  rewind (pFile);
+  fscanf (pFile, "%f", &f);
+  fscanf (pFile, "%s", str);
+  fclose (pFile);
+  printf ("I have read: %f and %s \n",f,str);
+  return 0;
+}
+
+/* fprintf example */
+#include <stdio.h>
+
+int main ()
+{
+   FILE * pFile;
+   int n;
+   char name [100];
+
+   pFile = fopen ("myfile.txt","w");
+   for (n=0 ; n<3 ; n++)
+   {
+     puts ("please, enter a name: ");
+     gets (name);
+     fprintf (pFile, "Name %d [%-10.10s]\n",n+1,name);
+   }
+   fclose (pFile);
+
+   return 0;
+}
+ while(!feof(fp))
+        {
+                // Clean buffer
+                memset(buffer, 0, 4096);
+                // Read a line
+                ret = fscanf(fp, "%4095[^\n]\n", buffer);
+                if (ret != EOF) {
+                        // Print line
+                        fprintf(stdout, "%s\n", buffer);
+                }
+        }
+        // Free buffer
+        free(buffer);
+        // Close file
+        fclose(fp);
+        return 0;
+}
